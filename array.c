@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void arrayPrint(int *array, int size) {
+void arrayPrint(int array[], int size) {
     int last = size - 1;
 
     for ( int i = 0; i < last; i++ ) {
@@ -9,13 +9,13 @@ void arrayPrint(int *array, int size) {
     printf("%d\n", array[last]);
 }
 
-void arrayIncrement(int *array, int size) {
+void arrayIncrement(int array[], int size) {
     for ( int i = 0; i < size; i++ ) {
         array[i] += 1;
     }
 }
 
-void arrayZeroFill(int *array, int size) {
+void arrayZeroFill(int array[], int size) {
     for ( int i = 0; i < size; i++ ) {
         array[i] = 0;
     }
