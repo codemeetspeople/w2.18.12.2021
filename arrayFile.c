@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int getLen(FILE* in) {
+int intScan(FILE* in) {
     int length;
 
     fscanf(in, "%d", &length);
@@ -26,7 +26,7 @@ void arrayWrite(FILE *out, int array[], int size) {
 int main() {
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
-    const int size = getLen(in);
+    const int size = intScan(in);
     int array[size];
 
     arrayRead(in, array, size);
