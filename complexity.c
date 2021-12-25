@@ -152,7 +152,7 @@ int rbench4(int n, int* counter) { // O(2^N)
     return rbench4(n-1, counter) + rbench4(n-2, counter);
 }
 
-int rbench5(int n, int* counter) {
+int rbench5(int n, int* counter) { // O(2^log2N) = O(N)
     if ( n <= 1 ) {
         *counter += 1;
         return 1;
