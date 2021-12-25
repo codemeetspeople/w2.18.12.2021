@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int factorial(int n) {
+int factorial(int n) { // O(N)
     if ( n <= 1 ) {
         if ( n < 0 ) {
             return -1;
@@ -9,6 +9,18 @@ int factorial(int n) {
     }
 
     return n * factorial(n-1);
+}
+
+
+int not_factorial(int n) { // O(logN)
+    if ( n <= 1 ) {
+        if ( n < 0 ) {
+            return -1;
+        }
+        return 1;
+    }
+
+    return n * factorial(n/2);
 }
 
 int main() {
